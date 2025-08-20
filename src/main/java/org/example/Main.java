@@ -19,8 +19,16 @@ public class Main {
 
             System.out.print("Idade: ");
             int idade = Integer.parseInt(scanner.nextLine());
+            while (idade < 0 || idade > 120) {
+                System.out.println("Idade inválida! Digite um valor entre 0 e 120.");
+                System.out.print("Idade: ");
+                idade = Integer.parseInt(scanner.nextLine());
+            }
 
-            usuarios.add(new Usuario(nome, idade));
+            System.out.print("Email: ");
+            String email = scanner.nextLine();
+
+            usuarios.add(new Usuario(nome, idade, email));
 
             System.out.print("Deseja adicionar outro usuário? (s/n): ");
             opcao = scanner.nextLine();
