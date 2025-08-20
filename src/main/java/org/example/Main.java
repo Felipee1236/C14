@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        List<Usuario> usuarioss = new ArrayList<>();
+        List<Usuario> usuario = new ArrayList<>();
         UsuarioService usuarioService = new UsuarioService();
         Scanner scanner = new Scanner(System.in);
 
@@ -28,12 +28,12 @@ public class Main {
             System.out.print("Email: ");
             String email = scanner.nextLine();
 
-            usuarioss.add(new Usuario(nome, idade, email));
+            usuario.add(new Usuario(nome, idade, email));
 
             System.out.print("Deseja adicionar outro usuário? (s/n): ");
             opcao = scanner.nextLine();
         } while (opcao.equalsIgnoreCase("s"));
 
-        usuarioService.salvarUsuarios(usuarioss);
+        usuarioService.salvarUsuarios(usuario);
     }
 }
