@@ -5,10 +5,9 @@ public class Usuario {
     private int idade;
     private String email;
 
-    public Usuario(String nome, int idade, String email) {
+    public Usuario(String nome, int idade,) {
         this.nome = nome;
         this.idade = idade;
-        this.email = email;
     }
 
     // Getters e Setters
