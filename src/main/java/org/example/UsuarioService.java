@@ -9,7 +9,7 @@ import java.util.List;
 
 public class UsuarioService {
 
-    private static final String ARQUIVO = "usuarios.json";
+    private static final String ARQUIVO = "usuarios.html";
 
     public void salvarUsuarios(List<Usuario> usuarios) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
